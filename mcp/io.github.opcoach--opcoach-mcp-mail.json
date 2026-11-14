@@ -1,0 +1,17 @@
+{
+  "serverId": "io.github.opcoach/opcoach-mcp-mail",
+  "date": "2026-11-10",
+  "version": "1.0.0",
+  "metadata": {
+    "name": "OPCoach MCP Mail",
+    "description": "An open-source MCP server that runs locally and connects to your own IMAP/SMTP mailbox. Search, read, send and organize mail from an MCP client. Mailbox credentials are configured locally."
+  },
+  "selfPublished": true,
+  "config": {
+    "type": "stdio",
+    "serverKey": "opcoach-mcp-mail",
+    "command": "java",
+    "args": ["-jar", "<absolute-path-to-jar>", "--stdio"],
+    "notes": "Requires Java 24 or later. Download the versioned JAR and SHA-256 from https://github.com/opcoach/opcoach-mcp-mail/releases/tag/v1.0.0 and verify the checksum. Replace <absolute-path-to-jar> with the downloaded JAR's absolute path. Run java -jar <absolute-path-to-jar> config setup in a terminal to configure your own IMAP/SMTP mailbox and store its password locally. On Linux, provide MAIL_MCP_VAULT_PASSWORD privately to the MCP client process so it can unlock the local vault without prompting on stdin. Let the MCP client launch the server; do not include credentials in the server configuration."
+  }
+}
